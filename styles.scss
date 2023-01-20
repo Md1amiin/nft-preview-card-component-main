@@ -1,0 +1,196 @@
+//Reset CSS
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+//Variables
+//Primary colors
+$primary-color-soft-blue: hsl(215, 51%, 70%);
+$primary-color-cyan: hsl(178, 100%, 50%);
+
+//Neutral colors
+$very-dark-blue-1: hsl(217, 54%, 11%);
+$very-dark-blue-2: hsl(216, 50%, 16%);
+$very-dark-blue-3: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+//Font info
+$font-size: 18px;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 600;
+$font-family: 'Outfit', sans-serif;
+
+//Mixins
+@mixin border {
+    border: 1px solid red;
+}
+
+@mixin background-font-color($bg-color, $font-color) {
+    background-color: $bg-color;
+    color: $font-color;
+}
+
+
+//Custom styles
+body {
+    @include background-font-color($very-dark-blue-1, $white);
+    display: grid;
+    place-items: center;
+    font-family: $font-family;
+}
+
+.coin {
+    @include background-font-color($very-dark-blue-2,$white);
+    width: 88vw;
+    height: 85vh;
+    border-radius: .8rem;
+    overflow: auto;
+    padding: 1.6rem;
+}
+
+.coin_img img{
+  border-radius: .5rem;
+}
+
+.coin_details{
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.coin_title {
+  color: $white;
+}
+
+.coin_info {
+  color: $primary-color-soft-blue;
+}
+
+.coin_price {
+  color: $primary-color-cyan;
+  font-weight: $fw-bold;
+}
+
+.price_and_time {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+
+}
+
+.price {
+  display: inline-flex;
+  gap: .5rem;
+  font-size: 1rem;
+}
+
+.price img{
+  height: 1.2rem;
+  width: .6rem;
+  padding-top: .3rem;
+}
+
+.time {
+  display: inline-flex;
+  color: $primary-color-soft-blue;
+  font-weight: $fw-regular;
+  gap: .4rem;
+}
+
+.time img {
+  height: 1.2rem;
+  width: .9rem;
+  padding-top: .3rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: $very-dark-blue-3; /* Modern Browsers */
+}
+
+.creator_img {
+  width: 1.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.coin_creator {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.creator_info {
+  color: $primary-color-soft-blue;
+}
+
+.creator_name {
+  color: $white;
+}
