@@ -104,15 +104,26 @@ body {
     display: grid;
     place-items: center;
     font-family: $font-family;
-}
+    width: 100vw;
+    height: 100vh;
+  }
 
 .coin {
     @include background-font-color($very-dark-blue-2,$white);
+    // width: 88vw;
+    // height: 85vh;
+    width: 20rem;
+    height: 34rem;
+    border-radius: .8rem;
+    overflow: hidden;
+    padding: 1.6rem;
+}
+
+@media screen and (max-width: 375px) {
+  .coin {
     width: 88vw;
     height: 85vh;
-    border-radius: .8rem;
-    overflow: auto;
-    padding: 1.6rem;
+  }
 }
 
 .coin_img img{
@@ -127,6 +138,7 @@ body {
 
 .coin_title {
   color: $white;
+  font-size: 1.4rem;
 }
 
 .coin_info {

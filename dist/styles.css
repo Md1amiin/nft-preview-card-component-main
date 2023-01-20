@@ -73,18 +73,26 @@ body {
   display: grid;
   place-items: center;
   font-family: "Outfit", sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
 .coin {
   background-color: hsl(216deg, 50%, 16%);
   color: hsl(0deg, 0%, 100%);
-  width: 88vw;
-  height: 85vh;
+  width: 20rem;
+  height: 34rem;
   border-radius: 0.8rem;
-  overflow: auto;
+  overflow: hidden;
   padding: 1.6rem;
 }
 
+@media screen and (max-width: 375px) {
+  .coin {
+    width: 88vw;
+    height: 85vh;
+  }
+}
 .coin_img img {
   border-radius: 0.5rem;
 }
@@ -97,6 +105,7 @@ body {
 
 .coin_title {
   color: hsl(0deg, 0%, 100%);
+  font-size: 1.4rem;
 }
 
 .coin_info {
