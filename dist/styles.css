@@ -80,39 +80,28 @@ body {
 .coin {
   background-color: hsl(216deg, 50%, 16%);
   color: hsl(0deg, 0%, 100%);
-  width: 20rem;
-  height: 34rem;
+  width: 22rem;
+  height: 37.3rem;
   border-radius: 0.8rem;
   overflow: hidden;
   padding: 1.6rem;
 }
-
-@media screen and (max-width: 375px) {
-  .coin {
-    width: 88vw;
-    height: 85vh;
-  }
-}
-.coin_img img {
+.coin .coin_img img {
   border-radius: 0.5rem;
 }
-
-.coin_details {
+.coin .coin_details {
   display: grid;
   gap: 1rem;
   padding: 1rem 0;
 }
-
-.coin_title {
+.coin .coin_title {
   color: hsl(0deg, 0%, 100%);
   font-size: 1.4rem;
 }
-
-.coin_info {
+.coin .coin_info {
   color: hsl(215deg, 51%, 70%);
 }
-
-.coin_price {
+.coin .coin_price {
   color: hsl(178deg, 100%, 50%);
   font-weight: 600;
 }
@@ -122,53 +111,53 @@ body {
   grid-template-columns: auto auto;
   justify-content: space-between;
 }
-
-.price {
+.price_and_time .price {
   display: inline-flex;
   gap: 0.5rem;
   font-size: 1rem;
 }
-
-.price img {
+.price_and_time .price img {
   height: 1.2rem;
   width: 0.6rem;
   padding-top: 0.3rem;
 }
-
-.time {
+.price_and_time .time {
   display: inline-flex;
   color: hsl(215deg, 51%, 70%);
   font-weight: 400;
   gap: 0.4rem;
 }
-
-.time img {
+.price_and_time .time img {
   height: 1.2rem;
   width: 0.9rem;
   padding-top: 0.3rem;
-}
-
-hr {
-  border: none;
-  height: 1px;
-  background-color: hsl(215deg, 32%, 27%); /* Modern Browsers */
-}
-
-.creator_img {
-  width: 1.5rem;
-  border: 1px solid white;
-  border-radius: 50%;
 }
 
 .coin_creator {
   display: inline-flex;
   gap: 1rem;
 }
-
-.creator_info {
+.coin_creator .creator_img {
+  width: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.coin_creator .creator_info {
   color: hsl(215deg, 51%, 70%);
+  align-self: center;
+}
+.coin_creator .creator_name {
+  color: hsl(0deg, 0%, 100%);
 }
 
-.creator_name {
-  color: hsl(0deg, 0%, 100%);
+@media screen and (max-width: 375px) {
+  .coin {
+    width: 88vw;
+    height: 82vh;
+  }
+}
+hr {
+  border: none;
+  height: 1px;
+  background-color: hsl(215deg, 32%, 27%); /* Modern Browsers */
 }/*# sourceMappingURL=styles.css.map */

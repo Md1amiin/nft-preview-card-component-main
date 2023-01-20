@@ -112,97 +112,99 @@ body {
     @include background-font-color($very-dark-blue-2,$white);
     // width: 88vw;
     // height: 85vh;
-    width: 20rem;
-    height: 34rem;
+    width: 22rem;
+    height: 37.3rem;
     border-radius: .8rem;
     overflow: hidden;
     padding: 1.6rem;
+    
+
+    .coin_img img{
+      border-radius: .5rem;
+    }
+    
+    .coin_details{
+      display: grid;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+    
+    .coin_title {
+      color: $white;
+      font-size: 1.4rem;
+    }
+    
+    .coin_info {
+      color: $primary-color-soft-blue;
+    }
+    
+    .coin_price {
+      color: $primary-color-cyan;
+      font-weight: $fw-bold;
+    }
 }
 
-@media screen and (max-width: 375px) {
-  .coin {
-    width: 88vw;
-    height: 85vh;
-  }
-}
-
-.coin_img img{
-  border-radius: .5rem;
-}
-
-.coin_details{
-  display: grid;
-  gap: 1rem;
-  padding: 1rem 0;
-}
-
-.coin_title {
-  color: $white;
-  font-size: 1.4rem;
-}
-
-.coin_info {
-  color: $primary-color-soft-blue;
-}
-
-.coin_price {
-  color: $primary-color-cyan;
-  font-weight: $fw-bold;
-}
 
 .price_and_time {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
 
+  .price {
+    display: inline-flex;
+    gap: .5rem;
+    font-size: 1rem;
+  }
+  
+  .price img{
+    height: 1.2rem;
+    width: .6rem;
+    padding-top: .3rem;
+  }
+  
+  .time {
+    display: inline-flex;
+    color: $primary-color-soft-blue;
+    font-weight: $fw-regular;
+    gap: .4rem;
+  }
+  
+  .time img {
+    height: 1.2rem;
+    width: .9rem;
+    padding-top: .3rem;
+  }
 }
 
-.price {
+.coin_creator {
   display: inline-flex;
-  gap: .5rem;
-  font-size: 1rem;
+  gap: 1rem;
+
+  .creator_img {
+    width: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+
+  .creator_info {
+    color: $primary-color-soft-blue;
+    align-self: center;
+  }
+
+  .creator_name {
+    color: $white;
+  }
 }
 
-.price img{
-  height: 1.2rem;
-  width: .6rem;
-  padding-top: .3rem;
-}
-
-.time {
-  display: inline-flex;
-  color: $primary-color-soft-blue;
-  font-weight: $fw-regular;
-  gap: .4rem;
-}
-
-.time img {
-  height: 1.2rem;
-  width: .9rem;
-  padding-top: .3rem;
+@media screen and (max-width: 375px) {
+  .coin {
+    width: 88vw;
+    height: 82vh;
+  }
 }
 
 hr {
   border: none;
   height: 1px;
   background-color: $very-dark-blue-3; /* Modern Browsers */
-}
-
-.creator_img {
-  width: 1.5rem;
-  border: 1px solid white;
-  border-radius: 50%;
-}
-
-.coin_creator {
-  display: inline-flex;
-  gap: 1rem;
-}
-
-.creator_info {
-  color: $primary-color-soft-blue;
-}
-
-.creator_name {
-  color: $white;
 }
